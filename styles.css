@@ -58,7 +58,8 @@ nav a {
   margin-top: 20px;
 }
 
-.portfolio-btn, .orcamento-btn {
+.portfolio-btn,
+.orcamento-btn {
   padding: 10px 20px;
   margin-right: 10px;
   border: 2px solid #ff0000;
@@ -70,18 +71,21 @@ nav a {
 /* Carrossel */
 .carousel {
   position: relative;
-  width: 400px; /* Ajuste conforme necessário */
+  width: 297px; /* Ajustado para a largura correta */
+  height: 446px; /* Ajustado para a altura correta */
+  overflow: hidden; /* Para esconder os quadros que saem da tela */
 }
 
 .carousel-track {
   display: flex;
+  position: relative; /* Para permitir o movimento do carrossel */
+  transition: transform 0.5s ease; /* Suaviza a transição */
 }
 
 .carousel-card {
-  width: 180px;
-  height: 200px;
+  width: 297px; /* Ajustado para a largura correta */
+  height: 446px; /* Ajustado para a altura correta */
   background-color: #d0d0d0;
-  margin-right: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
