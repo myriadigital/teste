@@ -1,0 +1,111 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #1c1c1c;
+  color: #ffffff;
+}
+
+/* Cabeçalho */
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  align-items: center;
+}
+
+.logo img {
+  width: 60px; /* Ajuste conforme necessário */
+}
+
+nav a {
+  color: #ffffff;
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+.area-cliente {
+  background-color: #ff0000;
+  padding: 8px 16px;
+  border-radius: 4px;
+}
+
+/* Seção principal */
+.main-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 50px;
+}
+
+.text-content h1 {
+  font-size: 2.5rem;
+  color: #e0e0e0;
+}
+
+.text-content p {
+  margin-top: 10px;
+  font-size: 1rem;
+  color: #b0b0b0;
+}
+
+.buttons {
+  margin-top: 20px;
+}
+
+.portfolio-btn, .orcamento-btn {
+  padding: 10px 20px;
+  margin-right: 10px;
+  border: 2px solid #ff0000;
+  color: #ffffff;
+  background-color: #ff0000;
+  cursor: pointer;
+}
+
+/* Carrossel */
+.carousel {
+  position: relative;
+  width: 400px; /* Ajuste conforme necessário */
+}
+
+.carousel-track {
+  display: flex;
+}
+
+.carousel-card {
+  width: 180px;
+  height: 200px;
+  background-color: #d0d0d0;
+  margin-right: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  color: #ff0000;
+  border-radius: 8px;
+}
+
+/* Indicadores do carrossel */
+.carousel-indicators {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.indicator {
+  width: 10px;
+  height: 10px;
+  background-color: #fff;
+  border-radius: 50%;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.indicator.active {
+  background-color: #ff0000;
+}
