@@ -58,8 +58,7 @@ nav a {
   margin-top: 20px;
 }
 
-.portfolio-btn,
-.orcamento-btn {
+.portfolio-btn, .orcamento-btn {
   padding: 10px 20px;
   margin-right: 10px;
   border: 2px solid #ff0000;
@@ -71,20 +70,18 @@ nav a {
 /* Carrossel */
 .carousel {
   position: relative;
-  width: 297px; /* Ajustado para a largura correta */
-  height: 446px; /* Ajustado para a altura correta */
-  overflow: hidden; /* Para esconder os quadros que saem da tela */
+  width: 297px; /* Ajustado para a largura do quadro */
+  overflow: hidden; /* Esconde os quadros que estão fora da tela */
 }
 
 .carousel-track {
   display: flex;
-  position: relative; /* Para permitir o movimento do carrossel */
-  transition: transform 0.5s ease; /* Suaviza a transição */
+  transition: transform 0.3s ease; /* Animação suave na transição */
 }
 
 .carousel-card {
-  width: 297px; /* Ajustado para a largura correta */
-  height: 446px; /* Ajustado para a altura correta */
+  width: 297px; /* Ajustado para a largura do quadro */
+  height: 446px; /* Altura do quadro */
   background-color: #d0d0d0;
   display: flex;
   align-items: center;
