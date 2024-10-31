@@ -9,43 +9,70 @@ body {
   font-family: Arial, sans-serif;
   background-color: #1c1c1c;
   color: #ffffff;
-}
-
-/* Cabeçalho */
-header {
-  display: flex;
-  justify-content: space-between;
-  padding: 20px;
-  align-items: center;
-}
-
-.logo img {
-  width: 60px; /* Ajuste conforme necessário */
-}
-
-nav a {
-  color: #ffffff;
-  margin: 0 10px;
-  text-decoration: none;
-}
-
-.area-cliente {
-  background-color: #ff0000;
-  padding: 8px 16px;
-  border-radius: 4px;
+  overflow-x: hidden; /* Impede rolagem horizontal indesejada */
 }
 
 /* Seção principal */
 .main-content {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  flex-direction: column; /* Muda para coluna para centralizar melhor */
+  align-items: center; /* Centraliza horizontalmente */
+  justify-content: center; /* Centraliza verticalmente */
   padding: 50px;
 }
 
+/* Ajustes para o cabeçalho */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  width: 100%; /* Para ocupar toda a largura */
+}
+
+.logo img {
+  width: 80px; /* Aumente o tamanho da logo, se necessário */
+}
+
+/* Carrossel */
+.carousel {
+  position: relative;
+  width: 100%; /* Ocupe toda a largura */
+  max-width: 600px; /* Largura máxima do carrossel */
+  overflow: hidden; /* Esconde cartões que estão fora da tela */
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.5s ease; /* Transição suave ao mudar de cartão */
+}
+
+.carousel-card {
+  width: 45%; /* Cada cartão ocupa 45% da largura do carrossel */
+  height: 446px; /* Altura de cada cartão */
+  background-color: #d0d0d0;
+  margin-right: 10px; /* Espaçamento entre os cartões */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  color: #ff0000;
+  border-radius: 8px;
+}
+
+.carousel-card:last-child {
+  margin-right: 0; /* Remove margem do último cartão */
+}
+
+/* Ajustes para o título */
+.text-content {
+  text-align: center; /* Centraliza o texto */
+}
+
 .text-content h1 {
-  font-size: 2.5rem;
+  font-size: 2.5rem; /* Tamanho do título */
   color: #e0e0e0;
+  margin-bottom: 20px; /* Espaçamento abaixo do título */
 }
 
 .text-content p {
@@ -54,6 +81,7 @@ nav a {
   color: #b0b0b0;
 }
 
+/* Botões */
 .buttons {
   margin-top: 20px;
 }
@@ -66,49 +94,3 @@ nav a {
   background-color: #ff0000;
   cursor: pointer;
 }
-
-/* Carrossel */
-.carousel {
-  position: relative;
-  width: 297px; /* Largura do cartão */
-  overflow: hidden; /* Esconde os cartões fora da tela */
-}
-
-.carousel-track {
-  display: flex;
-  transition: transform 0.5s ease; /* Animação suave na transição */
-}
-
-.carousel-card {
-  width: 297px; /* Largura do cartão */
-  height: 446px; /* Altura do cartão */
-  background-color: #d0d0d0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.5rem;
-  color: #ff0000;
-  border-radius: 8px;
-  flex-shrink: 0; /* Impede que os cartões encolham */
-}
-
-/* Indicadores do carrossel */
-.carousel-indicators {
-  display: flex;
-  justify-content: center;
-  margin-top: 10px;
-}
-
-.indicator {
-  width: 10px;
-  height: 10px;
-  background-color: #fff;
-  border-radius: 50%;
-  margin: 0 5px;
-  cursor: pointer;
-}
-
-.indicator.active {
-  background-color: #ff0000;
-}
-
