@@ -5,7 +5,7 @@ const totalCards = document.querySelectorAll('.carousel-card').length;
 const cardsToShow = 2;
 
 function moveCarousel(index) {
-  const offset = -index * 307; // Largura do cartão + margem (297px + 10px)
+  const offset = -index * (290 + 10); // Largura do cartão + margem (290px + 10px)
   track.style.transform = `translateX(${offset}px)`;
   
   indicators.forEach(ind => ind.classList.remove('active'));
@@ -26,3 +26,4 @@ indicators.forEach((indicator, index) => {
     moveCarousel(currentIndex);
   });
 });
+
