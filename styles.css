@@ -20,7 +20,7 @@ header {
 }
 
 .logo img {
-  width: 60px; /* Ajuste conforme necessário */
+  width: 60px;
 }
 
 nav a {
@@ -67,32 +67,19 @@ nav a {
   cursor: pointer;
 }
 
-/* Reset básico */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: Arial, sans-serif;
-  background-color: #1c1c1c;
-  color: #ffffff;
-}
-
 /* Slides */
 .slider {
   margin: 0 auto;
-  width: 800px;
+  width: 800px; 
   height: 400px;
   overflow: hidden;
-  position: relative;
 }
 
 .slides {
-  display: flex;
   width: 400%;
-  transition: transform 0.5s ease-in-out;
+  height: 400px;
+  display: flex;
+  transition: margin-left 0.5s ease;
 }
 
 .slides input {
@@ -100,23 +87,18 @@ body {
 }
 
 .slide {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  width: 25%;
+  position: relative;
 }
 
 .slide img {
   width: 800px;
-  height: 400px;
-  object-fit: cover;
 }
 
-/* Manual navigation */
 .manual-navigation {
   position: absolute;
-  width: 100%;
-  bottom: 10px;
+  width: 800px;
+  margin-top: -40px;
   display: flex;
   justify-content: center;
 }
@@ -124,22 +106,41 @@ body {
 .manual-btn {
   width: 12px;
   height: 12px;
-  border: 2px solid #fff;
+  background-color: #ccc;
+  border: 2px solid transparent;
   border-radius: 50%;
-  margin: 0 5px;
   cursor: pointer;
-  transition: background-color 0.3s;
+  transition: background-color 0.3s ease;
 }
 
-.manual-btn:hover, .manual-btn:focus {
-  background-color: #ff0000;
+.manual-btn:not(:last-child) {
+  margin-right: 15px;
 }
 
-/* Auto navigation indicators */
+.manual-btn:hover {
+  background-color: #fff;
+}
+
+#radio1:checked ~ .first {
+  margin-left: 0;
+}
+
+#radio2:checked ~ .first {
+  margin-left: -25%;
+}
+
+#radio3:checked ~ .first {
+  margin-left: -50%;
+}
+
+#radio4:checked ~ .first {
+  margin-left: -75%;
+}
+
 .navigation-auto {
   position: absolute;
-  width: 100%;
-  top: 360px;
+  width: 800px;
+  margin-top: 360px;
   display: flex;
   justify-content: center;
 }
@@ -147,13 +148,21 @@ body {
 .navigation-auto div {
   width: 12px;
   height: 12px;
-  border: 2px solid #ff0000;
-  margin: 0 5px;
+  background-color: #ccc;
+  border: 2px solid transparent;
   border-radius: 50%;
   cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
-.auto-btn1.active, .auto-btn2.active, .auto-btn3.active, .auto-btn4.active {
+.navigation-auto div:not(:last-child) {
+  margin-right: 10px;
+}
+
+#radio1:checked ~ .navigation-auto .auto-btn1,
+#radio2:checked ~ .navigation-auto .auto-btn2,
+#radio3:checked ~ .navigation-auto .auto-btn3,
+#radio4:checked ~ .navigation-auto .auto-btn4 {
   background-color: #ff0000;
 }
 
