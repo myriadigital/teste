@@ -1,46 +1,29 @@
 const indicators = document.querySelectorAll('.indicator');
 const track = document.querySelector('.carousel-track');
-const totalCards = indicators.length;
 let currentIndex = 0;
+const totalCards = document.querySelectorAll('.carousel-card').length;
+const cardsToShow = 2;
 
-// Função para atualizar o carrossel
-const updateCarousel = () => {
-  const offset = -currentIndex * 307; // 297px (largura do cartão) + 10px (margem)
+function moveCarousel(index) {
+  const offset = -index * 307; // Largura do cartão + margem (297px + 10px)
   track.style.transform = `translateX(${offset}px)`;
-
+  
   indicators.forEach(ind => ind.classList.remove('active'));
-  indicators[currentIndex].classList.add('active');
-};
+  indicators[index].classList.add('active');
+}
 
-// Navegação manual
+function nextCard() {
+  currentIndex = (currentIndex + 1) % (totalCards - cardsToShow + 1); // Loop de volta ao início
+  moveCarousel(currentIndex);
+}
+
+// Configura mudança automática a cada 10 segundos
+setInterval(nextCard, 10000);
+
 indicators.forEach((indicator, index) => {
   indicator.addEventListener('click', () => {
     currentIndex = index;
-    updateCarousel();
+    moveCarousel(currentIndex);
   });
 });
-
-// Navegação automática
-const autoSlide = () => {
-  currentIndex = (currentIndex + 1) % totalCards; // Volta ao primeiro após o último
-  updateCarousel();
-};
-
-// Iniciar a mudança automática a cada 10 segundos
-setInterval(autoSlide, 10000); // Muda automaticamente a cada 10 segundos
-
-    
-    // Se atingir o último cartão, volta ao primeiro
-    if (currentIndex >= totalCards) {
-        currentIndex = 0;
-    }
-    
-    updateCarousel(currentIndex);
-};
-
-// Iniciar a mudança automática a cada 10 segundos
-setInterval(autoSlide, 10000); // Muda automaticamente a cada 10 segundos
-
-
-setInterval(autoSlide, 10000); // Muda automaticamente a cada 10 segundos
 
