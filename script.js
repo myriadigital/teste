@@ -3,24 +3,32 @@ const track = document.querySelector('.carousel-track');
 const totalCards = indicators.length;
 let currentIndex = 0;
 
-const updateCarousel = (index) => {
-    const offset = -index * 317; // Largura do cartão + margem
-    track.style.transform = `translateX(${offset}px)`;
+// Função para atualizar o carrossel
+const updateCarousel = () => {
+  const offset = -currentIndex * 307; // 297px (largura do cartão) + 10px (margem)
+  track.style.transform = `translateX(${offset}px)`;
 
-    indicators.forEach(ind => ind.classList.remove('active'));
-    indicators[index].classList.add('active');
+  indicators.forEach(ind => ind.classList.remove('active'));
+  indicators[currentIndex].classList.add('active');
 };
 
+// Navegação manual
 indicators.forEach((indicator, index) => {
-    indicator.addEventListener('click', () => {
-        currentIndex = index;
-        updateCarousel(currentIndex);
-    });
+  indicator.addEventListener('click', () => {
+    currentIndex = index;
+    updateCarousel();
+  });
 });
 
-// Função para passar automaticamente os cartões
+// Navegação automática
 const autoSlide = () => {
-    currentIndex++;
+  currentIndex = (currentIndex + 1) % totalCards; // Volta ao primeiro após o último
+  updateCarousel();
+};
+
+// Iniciar a mudança automática a cada 10 segundos
+setInterval(autoSlide, 10000); // Muda automaticamente a cada 10 segundos
+
     
     // Se atingir o último cartão, volta ao primeiro
     if (currentIndex >= totalCards) {
