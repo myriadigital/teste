@@ -1,31 +1,27 @@
 const indicators = document.querySelectorAll('.indicator');
 const track = document.querySelector('.carousel-track');
+const totalCards = indicators.length;
 let currentIndex = 0;
-const totalCards = indicators.length; // Total de cartões
 
-// Função para atualizar o carrossel
-function updateCarousel() {
-    const offset = -currentIndex * 297; // 297px é a largura de cada cartão
+const updateCarousel = (index) => {
+    const offset = -index * 317; // Largura do cartão + margem
     track.style.transform = `translateX(${offset}px)`;
 
-    // Atualiza os indicadores
     indicators.forEach(ind => ind.classList.remove('active'));
-    indicators[currentIndex].classList.add('active');
-}
+    indicators[index].classList.add('active');
+};
 
-// Adiciona funcionalidade de clicar nos indicadores
 indicators.forEach((indicator, index) => {
     indicator.addEventListener('click', () => {
         currentIndex = index;
-        updateCarousel();
+        updateCarousel(currentIndex);
     });
 });
 
-// Função para mudar o cartão automaticamente a cada 10 segundos
-setInterval(() => {
-    currentIndex = (currentIndex + 1) % totalCards; // Avança para o próximo cartão
-    updateCarousel();
-}, 10000); // 10 segundos
+const autoSlide = () => {
+    currentIndex = (currentIndex + 1) % totalCards;
+    updateCarousel(currentIndex);
+};
 
-// Chama a função pela primeira vez para garantir que o estado inicial está correto
-updateCarousel();
+setInterval(autoSlide, 10000); // Muda automaticamente a cada 10 segundos
+
