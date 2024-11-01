@@ -142,10 +142,10 @@ nav a {
   transition: 5s;
 }
 
-.navigation-auto{
+.navigation-auto {
   position: absolute;
   width: 800px;
-  margin-top: 360px
+  margin-top: 360px;
   display: flex;
   justify-content: center;
 }
