@@ -32,21 +32,51 @@
     </div>
 
     <!-- Carrossel de Cartões -->
-    <div class="carousel">
-      <div class="carousel-track">
-        <div class="carousel-card">Galeria</div>
-        <div class="carousel-card">Serviços</div>
-        <div class="carousel-card">Cidades</div>
-        <div class="carousel-card">Depoimentos</div>
+    <div class="slider">
+      
+      <div class="slides">
+        <!--Radio Buttons-->
+          <input type="radio" name="radio-btn" id="radio1">
+          <input type="radio" name="radio-btn" id="radio2">
+          <input type="radio" name="radio-btn" id="radio3">
+          <input type="radio" name="radio-btn" id="radio4">
+          <!--Fim Radio Buttons-->
+
+        <!--Slide images-->
+        <div class="slide first">
+          <img src="C:\Users\jacye\Downloads\pexels-taryn-elliott-3889865.jpg" alt="Galeria" />
+        </div>
+        <div class="slide">
+          <img src="C:\Users\jacye\Downloads\pexels-vintage-stories-5697793.jpg" alt="Locais" />
+        </div>
+        <div class="slide">
+          <img src="C:\Users\jacye\Downloads\pexels-jeshoots-238118.jpg" alt="Serviços" />
+        </div>
+        <div class="slide">
+          <img src="C:\Users\jacye\Downloads\pexels-leah-newhouse-50725-952594.jpg" alt="Depoimentos" />
+        </div>
+    <!--Fim Slide images-->
+
+        <!--Navigation auto-->
+        <div class="naviation-auto">
+          <div clss="auto-btn1"></div>
+          <div clss="auto-btn2"></div>
+          <div clss="auto-btn3"></div>
+          <div clss="auto-btn4"></div>
+        </div>
+
       </div>
-      <div class="carousel-indicators">
-        <span class="indicator active"></span>
-        <span class="indicator"></span>
-        <span class="indicator"></span>
-        <span class="indicator"></span>
+
+      <div class="manual-navigation">
+        <label for="radio1" class="manual-btn"></label>
+        <label for="radio2" class="manual-btn"></label>
+        <label for="radio3" class="manual-btn"></label>
+        <label for="radio4" class="manual-btn"></label>
       </div>
+      
+
     </div>
-  </section>
+      
 
   <script src="script.js"></script>
 </body>
