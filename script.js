@@ -9,7 +9,7 @@ function moveCarousel(index) {
   track.style.transform = `translateX(${offset}px)`;
   
   indicators.forEach(ind => ind.classList.remove('active'));
-  indicators[index].classList.add('active');
+  indicators[index % indicators.length].classList.add('active');
 }
 
 function nextCard() {
@@ -26,4 +26,3 @@ indicators.forEach((indicator, index) => {
     moveCarousel(currentIndex);
   });
 });
-
