@@ -1,90 +1,89 @@
 /* Reset básico */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: Arial, sans-serif;
-    background-color: #1c1c1c;
-    color: #ffffff;
+  font-family: Arial, sans-serif;
+  background-color: #1c1c1c;
+  color: #ffffff;
 }
 
 /* Cabeçalho */
 header {
-    display: flex;
-    justify-content: space-between;
-    padding: 20px;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  align-items: center;
 }
 
 .logo img {
-    width: 60px; /* Ajuste conforme necessário */
+  width: 60px; /* Ajuste conforme necessário */
 }
 
 nav a {
-    color: #ffffff;
-    margin: 0 10px;
-    text-decoration: none;
+  color: #ffffff;
+  margin: 0 10px;
+  text-decoration: none;
 }
 
 .area-cliente {
-    background-color: #ff0000;
-    padding: 8px 16px;
-    border-radius: 4px;
+  background-color: #ff0000;
+  padding: 8px 16px;
+  border-radius: 4px;
 }
 
 /* Seção principal */
 .main-content {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 50px;
 }
 
 .text-content h1 {
-    font-size: 2.5rem;
-    color: #e0e0e0;
+  font-size: 2.5rem;
+  color: #e0e0e0;
 }
 
 .text-content p {
-    margin-top: 10px;
-    font-size: 1rem;
-    color: #b0b0b0;
+  margin-top: 10px;
+  font-size: 1rem;
+  color: #b0b0b0;
 }
 
 .buttons {
-    margin-top: 20px;
+  margin-top: 20px;
 }
 
 .portfolio-btn, .orcamento-btn {
-    padding: 10px 20px;
-    margin-right: 10px;
-    border: 2px solid #ff0000;
-    color: #ffffff;
-    background-color: #ff0000;
-    cursor: pointer;
+  padding: 10px 20px;
+  margin-right: 10px;
+  border: 2px solid #ff0000;
+  color: #ffffff;
+  background-color: #ff0000;
+  cursor: pointer;
 }
 
 /* Carrossel */
-/* Ajuste as dimensões para que dois cartões apareçam */
 .carousel {
   position: relative;
-  width: 634px; /* Largura para exibir 2 cartões de 297px + margem */
-  overflow: hidden; /* Oculta os cartões fora da área visível */
+  width: 600px; /* Ajustado para caber dois cartões */
+  overflow: hidden;
 }
 
 .carousel-track {
   display: flex;
-  transition: transform 0.5s ease; /* Efeito suave ao mover */
+  transition: transform 0.5s ease;
 }
 
 .carousel-card {
-  width: 297px; /* Largura do cartão */
-  height: 446px; /* Altura do cartão */
+  width: 297px;
+  height: 446px;
   background-color: #d0d0d0;
-  margin-right: 10px; /* Espaço entre os cartões */
+  margin-right: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -112,3 +111,4 @@ nav a {
 .indicator.active {
   background-color: #ff0000;
 }
+
