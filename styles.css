@@ -104,7 +104,7 @@ nav a {
 }
 
 .manual-btn{
-  border: 2px solid #FFF;
+  border: 2px solid #fff;
   padding: 5px;
   border-radius: 10px;
   cursor: pointer;
@@ -116,25 +116,61 @@ nav a {
 }
 
 .manual-btn:haver{
-  background-color: #ff0000;
+  background-color: #fff;
+}
 
-/* Indicadores do carrossel */
-.carousel-indicators {
+#radio1:checked~ .first{
+    margin-left:0;
+  }
+
+#radio2:checked~ .first{
+    margin-left: -25%;
+  }
+
+#radio3:checked~ .first{
+    margin-left: -50%;
+  }
+
+#radio4:checked~ .first{
+    margin-left: -75%;
+  }
+  
+.navigation-auto div{
+  border: 2px solid #ff0000;
+  padding: 5px;
+  border-radius: 10px;
+  transition: 5s;
+}
+
+.navigation-auto{
+  position: absolute;
+  width: 800px;
+  margin-top: 360px
   display: flex;
   justify-content: center;
-  margin-top: 10px;
 }
 
-.indicator {
-  width: 10px;
-  height: 10px;
-  background-color: #fff;
-  border-radius: 50%;
-  margin: 0 5px;
-  cursor: pointer;
+.navigation-auto div:not(:-last-child){
+  margin-right: 40px;
 }
 
-.indicator.active {
-  background-color: #ff0000;
+#radio1:checked~ .navigation-auto .auto-btn1{
+background-color: #ff0000;
+border: solid #ff0000
+}
+
+#radio2:checked~ .navigation-auto .auto-btn2{
+background-color: #ff0000;
+border: solid #ff0000
+}
+
+#radio3:checked~ .navigation-auto .auto-btn3{
+background-color: #ff0000;
+border: solid #ff0000
+}
+
+#radio4:checked~ .navigation-auto .auto-btn4{
+background-color: #ff0000;
+border: solid #ff0000
 }
 
