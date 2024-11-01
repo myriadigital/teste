@@ -80,8 +80,8 @@ nav a {
 }
 
 .carousel-card {
-  width: 297px;
-  height: 446px;
+  width: 290px; /* Ajuste para caber 2 cartões no carrossel */
+  height: 200px;
   background-color: #d0d0d0;
   margin-right: 10px;
   display: flex;
