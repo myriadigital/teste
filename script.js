@@ -18,10 +18,21 @@ indicators.forEach((indicator, index) => {
     });
 });
 
+// Função para passar automaticamente os cartões
 const autoSlide = () => {
-    currentIndex = (currentIndex + 1) % totalCards;
+    currentIndex++;
+    
+    // Se atingir o último cartão, volta ao primeiro
+    if (currentIndex >= totalCards) {
+        currentIndex = 0;
+    }
+    
     updateCarousel(currentIndex);
 };
+
+// Iniciar a mudança automática a cada 10 segundos
+setInterval(autoSlide, 10000); // Muda automaticamente a cada 10 segundos
+
 
 setInterval(autoSlide, 10000); // Muda automaticamente a cada 10 segundos
 
