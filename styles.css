@@ -68,47 +68,47 @@ nav a {
 }
 
 /* Carrossel */
+/* Ajuste as dimensões para que dois cartões apareçam */
 .carousel {
-    position: relative;
-    width: 640px; /* Ajuste para caber dois cartões */
-    overflow: hidden;
+  position: relative;
+  width: 634px; /* Largura para exibir 2 cartões de 297px + margem */
+  overflow: hidden; /* Oculta os cartões fora da área visível */
 }
 
 .carousel-track {
-    display: flex;
-    transition: transform 0.5s ease;
+  display: flex;
+  transition: transform 0.5s ease; /* Efeito suave ao mover */
 }
 
 .carousel-card {
-    width: 297px; /* Largura do cartão */
-    height: 446px; /* Altura do cartão */
-    background-color: #d0d0d0;
-    margin-right: 20px; /* Espaçamento entre os cartões */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.5rem;
-    color: #ff0000;
-    border-radius: 8px;
+  width: 297px; /* Largura do cartão */
+  height: 446px; /* Altura do cartão */
+  background-color: #d0d0d0;
+  margin-right: 10px; /* Espaço entre os cartões */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  color: #ff0000;
+  border-radius: 8px;
 }
 
 /* Indicadores do carrossel */
 .carousel-indicators {
-    display: flex;
-    justify-content: center;
-    margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
 }
 
 .indicator {
-    width: 10px;
-    height: 10px;
-    background-color: #fff;
-    border-radius: 50%;
-    margin: 0 5px;
-    cursor: pointer;
+  width: 10px;
+  height: 10px;
+  background-color: #fff;
+  border-radius: 50%;
+  margin: 0 5px;
+  cursor: pointer;
 }
 
 .indicator.active {
-    background-color: #ff0000;
+  background-color: #ff0000;
 }
-
